@@ -1,5 +1,6 @@
 <script>
     import PageContainer from '@/components/PageContainer.svelte';
+    $effect(() => { document.body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--blue').trim() });
 </script>
 
 <title>utilo will be here someday</title>

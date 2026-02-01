@@ -1,6 +1,9 @@
 <script>
     import PageContainer from '@/components/PageContainer.svelte';
+    $effect(() => { document.body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--purple').trim() });
 </script>
+
+<title>I love metamorphosis so much</title>
 
 <PageContainer newClass='bg-purple'>
     <div class='h-full px-4 py-8 flex flex-col justify-center items-center gap-2 text-center text-gold'>

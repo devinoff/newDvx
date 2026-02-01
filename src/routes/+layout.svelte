@@ -1,6 +1,6 @@
 <script lang='ts'>
 	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/favicon.png';
     import {resolve} from '$app/paths';
 
 	let { children } = $props();
@@ -9,7 +9,7 @@
         { id: 1, label: 'homepage', drawing: 'home', url: '/', linkClass: 'col-span-2' },
         { id: 3, label: 'utility tools', drawing: 'utilo', url: '/utilo', svgClass: 'text-blue' },
         { id: 4, label: 'fan-made compilation of ashnikko tracks', drawing: 'hex', url: '/hex', svgClass: 'text-purple' }
-    ]
+    ];
 </script>
 
 <style>
@@ -37,7 +37,7 @@
     <link rel='icon' href={favicon} />
 </svelte:head>
 
-<section class='md:fixed max-md:w-full md:top-[50dvh] md:-translate-y-[50%] md:ml-4 grid grid-cols-1 xxs:grid-cols-2 md:flex md:flex-col gap-3 bg-cream p-2 md:rounded-md hover:opacity-100 transition-opacity duration-[0.4s] md:opacity-60 xl:opacity-100 z-50'>
+<section class='md:fixed max-md:w-full md:top-[50dvh] md:-translate-y-[50%] md:ml-4 grid grid-cols-1 xxs:grid-cols-2 md:flex md:flex-col gap-3 bg-cream p-2 rounded-xl md:rounded-md hover:opacity-100 transition-opacity duration-[0.4s] md:opacity-60 xl:opacity-100 z-50'>
     {#each menuItems as item (item.id)}
         <a href={resolve(item.url)} class={`menuLink w-full flex justify-center items-center px-4 py-2 relative text-green text-center ${item.linkClass}`} title={`link for ${item.label}`}>
             <svg class={`absolute top-0 left-0 w-full h-full ${item.svgClass}`} width='100%' height='100%'>
