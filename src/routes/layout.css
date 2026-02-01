@@ -1,0 +1,91 @@
+@import 'tailwindcss';
+
+
+@font-face {
+    font-family: 'DemonRush';
+    src: url('/fonts/DemonRush-Regular.ttf') format('truetype-variations');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+@theme {
+    --color-*: initial;
+    --color-black: var(--black);
+    --color-white: var(--white);
+    --color-green: var(--green);
+    --color-purple: var(--purple);
+    --color-blue: var(--blue);
+    --color-gold: var(--gold);
+    --color-orange: var(--orange);
+    --color-cream: var(--cream);
+
+    --breakpoint-xs: 24rem;
+    --breakpoint-xxs: 12rem;
+}
+
+
+@layer base {
+    :root {
+        font-family: "JetBrains Mono", sans-serif;
+        --black: hsl(0, 0%, 0%);
+        --white: hsl(0, 0%, 100%);
+        --green: hsl(90, 30%, 40%);
+        --purple: hsl(280, 50%, 25%);
+        --blue: hsl(230, 50%, 25%);
+        --gold: hsl(60, 30%, 40%);
+        --orange: hsl(30, 50%, 55%);
+        --cream: hsl(50, 90%, 95%);
+    }
+    html, body {
+        margin: 0;
+    }
+    body {
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+    }
+    path {
+        transform-origin: center;
+        transform-box: fill-box;
+    }
+}
+
+
+
+
+.demonRush {
+    font-family: DemonRush, sans-serif;
+}
+
+.circleMe {
+    animation: cmAnim 12s ease-in-out infinite;
+}
+
+@keyframes cmAnim {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(calc(100dvw - 100%));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
