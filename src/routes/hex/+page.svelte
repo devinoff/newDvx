@@ -7,7 +7,7 @@
 
 <PageContainer newClass='bg-purple'>
     <div class='h-full px-4 py-8 flex flex-col justify-center items-center gap-2 text-center text-gold'>
-        <img src='ashnikko-hex-compressed.jpg' alt='ashnikko hex compilation cover' class='w-full max-w-[300px]' />
+        <img src='ashnikko-hex-compressed.jpg' alt='ashnikko hex compilation cover' class='w-full max-w-[300px] rounded-xl' />
         <h1 class='text-4xl text-gold font-bold mt-10 -rotate-2 demonRush'>HEX <span class='text-xl'>[Ashnikko]</span></h1>
         <p class='max-w-[400px] -rotate-2'>This is a fan-curated collection of unreleased tracks by Ashnikko</p>
         <p class='mt-10 demonRush text-xl'>Tracklist:</p>

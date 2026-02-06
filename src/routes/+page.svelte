@@ -13,19 +13,16 @@
 <title>homepage</title>
 
 <PageContainer newClass='bg-green'>
-    <div class='p-4'>
-        <h1>
-            this is my homepage. hello.
-        </h1>
+    <div class='h-full flex flex-col justify-center items-center gap-2 text-center px-4'>
+        <img src='drawings/hithisis.png' class='' alt='hi this is my webpage' />
+        <img src='drawings/youcansee.png' class='max-h-[48px]' alt="you can see what I'm into here" />
+        <div class='flex flex-col mt-8'>
+            {#each links as link, i (link.id)}
+                <a href={link.url} target='_blank' class={`w-full flex justify-center items-center gap-4 bg-green hover:scale-110 hover:rounded-md transition-[scale,border-radius] duration-200 ease-in-out border-2 -mt-[2px] ${i === 0 ? 'rounded-t-md' : i === links.length - 1 ? 'rounded-b-md' : ''}`}>
+                    <img src={`drawings/${link.image}L.png`} class='max-w-[40px]' alt={`${link.label} logo`} />
+                    <img src={`drawings/${link.image}T.png`} class='h-[60%]' alt={`${link.label} text`} />
+                </a>
+            {/each}
+        </div>
     </div>
 </PageContainer>
-
-<div class='md:absolute top-5 right-10 grid grid-cols-3 text-center md:flex md:flex-col gap-3 bg-orange px-4 py-3 md:py-2 md:border-2 md:border-black rounded-xl md:rounded-md'>
-    <img src='drawings/myLinks.png' class='h-6 col-span-3 mx-auto' alt='my social links are below' />
-    {#each links as link (link.id)}
-        <a href={link.url} target='_blank' class='w-full flex max-md:justify-center items-center gap-2'>
-            <img src={`logos/${link.image}.png`} class='max-w-[28px]' alt={`${link.label} logo`} />
-            <img src={`drawings/${link.image}Text.png`} class='h-6 max-xs:hidden' alt={`${link.label} text`} />
-        </a>
-    {/each}
-</div>

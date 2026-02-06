@@ -51,7 +51,7 @@
         --blue: hsl(230, 50%, 25%);
         --gold: hsl(60, 30%, 40%);
         --orange: hsl(30, 50%, 55%);
-        --cream: hsl(50, 90%, 95%);
+        --cream: hsl(50, 70%, 90%);
     }
     html, body {
         margin: 0;
@@ -75,7 +75,7 @@
 }
 
 .circleMe {
-    animation: cmAnim 12s ease-in-out infinite;
+    animation: cmAnim 20s ease-in-out infinite;
 }
 
 @keyframes cmAnim {
